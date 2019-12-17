@@ -39,7 +39,20 @@ class time:
         if currentH >= 18 and currentH !=0:
             voz.speak('Good night!')
 
+
+class Saludo:
+    @staticmethod
+    def hi():
+        voz.speak('Hello, onii chan')
+    
+    @staticmethod
+    def bye():
+        voz.speak('good bye sir Elizondo have a nice day.')
+        sys.exit()
+
+
 class Query:
+    @staticmethod
     def myCommand():
    
         r = sr.Recognizer()                                                                                   
@@ -57,9 +70,28 @@ class Query:
 
         return query
 
-
+#Creacion de objeto time
 time = time()
-
+#Inicio del programa usando las funciones de las clases
 time.greetMe()
 voz.speak('onii chan, Im suuchan')
 voz.speak('How can I help you?')
+
+#If para los querys
+if __name__ == '__main__':
+    while True:
+        query = Query()
+        query = query.myCommand()
+        query = query.lower()
+
+        #Accesos Directos
+        
+
+
+        #Clima
+        #Accesos directos de aplicaciones
+        #Musica
+        #Abrir correo
+            #Dictar un correo
+        #Recordatorios
+
